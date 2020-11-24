@@ -48,7 +48,17 @@ namespace WindowsFormsApp1
 
         private void TrackBar1_Scroll(object sender, EventArgs e)
         {
+            Color cc = Color.Black;
             g = this.CreateGraphics();               //Create a graphics object
+
+            b = new SolidBrush(cc);
+            g.FillRectangle(b, 124, 150, 20, 250);   //Draw a rectangle using the current pen
+            for (int i = 390; i >= 300; i = i - 5)
+            {
+                g.FillRectangle(b, 100, i, 150, 9);   //Draw a rectangle using the current pen
+
+            }
+
             b = new SolidBrush(c);
             g.FillRectangle(b, 124, 150, 20, 250);   //Draw a rectangle using the current pen
             for (int i = 390; i >= 300; i = i - 5)
@@ -57,10 +67,7 @@ namespace WindowsFormsApp1
 
                 Thread.Sleep(500);
             }
-            //c = Color.Black;
-            //b = new SolidBrush(c);
-
-            //g.FillRectangle(b, 100, 300, 150, 10);
+           
         }
 
      
